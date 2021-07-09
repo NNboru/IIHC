@@ -13,24 +13,15 @@ for Layer_Feature in layers_list:
         #train
         folder  = 'Images_numpy/'
         X_train = np.load(folder + 'X_train.npy')
-        Y_train = np.load(folder + 'Y_train.npy')
-        Y_train1= np.load(folder + 'Y_train_1dim.npy')
-
         X_test = np.load(folder + 'X_test.npy')
-        Y_test = np.load(folder + 'Y_test.npy')
-        Y_test1= np.load(folder + 'Y_test_1dim.npy')
-
 
         print("Training Features:", X_train.shape)
-        print("Training Labels:", Y_train.shape)
         print("Test Features:", X_test.shape)
-        print("Test Labels:", Y_test.shape)
 
-        n_length, n_features, n_outputs = X_train.shape[0], X_train.shape[2], Y_train.shape[0]
-        #print(X_train.shape[0])
+        # n_length, n_features, n_outputs = X_train.shape[0], X_train.shape[2], Y_train.shape[0]
 
 
-        
+
         ################### Model + Classifier ######################
 
         # downloading model for transfer learning
